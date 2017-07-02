@@ -13,29 +13,31 @@ PubSub works with FilteringEnabled and allows for easy Publish and Subscribe fun
 
 Why is this cool? Well, let's say I wanted to announce a player has joined the game in chat.
 
-&nbsp;
 
 The Player joining is something we connect to on the server [Players.PlayerAdded]
 
-&nbsp;
 
 The chat is on the client, so the server and client need a RemoteEvent to communicate through.
 
-&nbsp;
 
 You COULD create the RemoteEvent as a static object in ReplicatedStorage, then write code on
 both the server and the client to access that event and handle it as needed.
 
+
 Of course, you have to hope the event is there when both the client and the server are looking for it.
+
 
 You also have to do this for every RemoteEvent in your game...
 
+&nbsp;
 
 *ugh*
 
+&nbsp;
 
 Better way? PubSub.
 
+&nbsp;
 
 PubSub creates RemoteEvents when they are needed and cleans them up when they aren't.
 
@@ -45,9 +47,11 @@ PubSub ensures RemoteEvents are always available prior to attempted use.
 
 PubSub also supports client to client and server to server eventing. RemoteEvents (alone) do not.
 
+&nbsp;
 
 ___
 
+&nbsp;
 
 Let's announce that new player in chat using PubSub:
 
@@ -86,9 +90,11 @@ Done. That's all there is to it.
 
 No RemoteEvent objects for you to create and it is easy to use, just Publish and Subscribe!
 
+&nbsp;
 
 ___
 
+&nbsp;
 
 ### To start using PubSub in your game:
 + Create a Module in ReplicatedStorage.
@@ -97,6 +103,7 @@ ___
 + Paste the code into the PubSub module you made in your game and close the file.
 + Look in the GitHub ServerScriptService\BootStrap.lua to see more examples of use.
 
+&nbsp;
 
 ## THE FOLLOWING CODE FROM BOOTSTRAP.LUA IS REQUIRED IN YOUR SERVER CODE AS EARLY AS YOU CAN LOAD IT
 If you leave this step out, the client and server will not talk to eachother!
@@ -121,6 +128,7 @@ end
 CreateRemoteEvent.OnServerInvoke = onCreateRemoteEvent
 ```
 
+&nbsp;
 
 On Roblox I'm HuotChu.
 
