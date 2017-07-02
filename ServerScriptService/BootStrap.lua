@@ -49,15 +49,23 @@ CreateRemoteEvent.OnServerInvoke = onCreateRemoteEvent
 --  --  --  --  --
 
 
---[[ Example Usage ]]--
---local OnPlayerJoined = function (playerName) print(playerName..' joined the game!') end
---PubSub.subscribe('PlayerJoined', OnPlayerJoined, 'BootStrap', 'noRemote')
---Players.PlayerAdded:connect(function (player)
---    PubSub.publish('PlayerJoined', player.Name)
---end)
+--[[ More Examples: Server to Server ]]--
+--  local OnPlayerJoined = function (playerName) print(playerName..' joined the game!') end
+--  PubSub.subscribe('PlayerJoined', OnPlayerJoined, 'BootStrap', 'noRemote')
+--  Players.PlayerAdded:connect(function (player)
+--      PubSub.publish('PlayerJoined', player.Name)
+--  end)
 
 
--- If the Client was publishing 'PlayerJoined' and we wanted to fire OnPlayerJoined, exclude 'noRemote'
+--[[ More Examples: Client to Server ]]--
+-- -- Note client passes Player as first argument automagically
+--  local OnPlayerClickedButton = function (player, btnValue) print(player.Name..' clicked and server got '..btnValue) end
+--  PubSub.subscribe('PlayerClicked', OnPlayerClickedButton, 'BootStrap')
+--    --[[ Client GUI, LocalScript, for example ]]--
+--  PubSub.publish('PlayerClicked', 'I am a button')
+
+
+
 
 
 
