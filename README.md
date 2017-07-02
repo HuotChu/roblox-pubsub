@@ -64,6 +64,7 @@ local ReplicatedStorage = game:GetService('ReplicatedStorage')
 local PubSub = require(ReplicatedStorage:WaitForChild('PubSub'))
 
 local OnPlayerConnected = function (player)
+    wait(1)
     PubSub.publish('AnnouncePlayer', player.Name)
 end
 
