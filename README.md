@@ -5,15 +5,23 @@ PubSub for Roblox enables 4 way code communication via an Event Management syste
 
 (Server/Server, Server/Client, Client/Client, Client/Server)
 
+&nbsp;
 
 PubSub works with FilteringEnabled and allows for easy Publish and Subscribe functionality.
 
+&nbsp;
 
 Why is this cool? Well, let's say I wanted to announce a player has joined the game in chat.
 
+&nbsp;
+
 The Player joining is something we connect to on the server [Players.PlayerAdded]
 
+&nbsp;
+
 The chat is on the client, so the server and client need a RemoteEvent to communicate through.
+
+&nbsp;
 
 You COULD create the RemoteEvent as a static object in ReplicatedStorage, then write code on
 both the server and the client to access that event and handle it as needed.
