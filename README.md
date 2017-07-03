@@ -1,6 +1,6 @@
 # roblox-pubsub
 
-PubSub for Roblox enables 4 way code communication via an Event Management system.
+## PubSub for Roblox enables 4 way code communication via an Event Management system.
 
 
 (Server/Server, Server/Client, Client/Client, Client/Server)
@@ -8,6 +8,9 @@ PubSub for Roblox enables 4 way code communication via an Event Management syste
 &nbsp;
 
 PubSub works with FilteringEnabled and allows for easy Publish and Subscribe functionality.
+
+
+No Copylock Sample on Roblox: https://www.roblox.com/games/896539588/Event-Management-Demo
 
 &nbsp;
 
