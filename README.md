@@ -1,6 +1,6 @@
 # roblox-pubsub
 
-## PubSub for Roblox enables 4 way code communication via an Event Management system.
+# PubSub for Roblox enables 4 way code communication via an Event Management system.
 
 
 (Server/Server, Server/Client, Client/Client, Client/Server)
