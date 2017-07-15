@@ -61,7 +61,7 @@ Let's announce that new player in chat using PubSub:
 
 `ServerScriptService > Script`
 
-```
+```lua
 local Players = game:GetService('Players')
 local ReplicatedStorage = game:GetService('ReplicatedStorage')
 local PubSub = require(ReplicatedStorage:WaitForChild('PubSub'))
@@ -77,7 +77,7 @@ Players.PlayerAdded:connect(OnPlayerConnected)
 
 `Chat > ChatScript > ChatMain`
 
-```
+```lua
 local StarterGui = game:GetService('StarterGui')
 local PubSub = require(ReplicatedStorage:WaitForChild('PubSub'))
 
@@ -118,7 +118,7 @@ and paste them into a Script in ServerScriptService. Do your game init or start 
 at the end of the file after the following section has a chance to run.
 
 
-```
+```lua
 local Players = game:GetService('Players')
 local ReplicatedStorage = game:GetService('ReplicatedStorage')
 local PubSub = require(ReplicatedStorage:WaitForChild('PubSub'))
