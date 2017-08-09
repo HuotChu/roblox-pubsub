@@ -75,7 +75,7 @@ Players.PlayerAdded:connect(OnPlayerConnected)
 ```
 
 
-`Chat > ChatScript > ChatMain`
+`StarterGui > LocalScript`
 
 ```lua
 local StarterGui = game:GetService('StarterGui')
