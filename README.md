@@ -75,7 +75,7 @@ Players.PlayerAdded:connect(OnPlayerConnected)
 ```
 
 
-`StarterGui > LocalScript`
+`StarterGui > YourLocalScript`
 
 ```lua
 local StarterGui = game:GetService('StarterGui')
@@ -85,7 +85,7 @@ PubSub.subscribe('AnnouncePlayer', function (playerName)
 	StarterGui:SetCore('ChatMakeSystemMessage', {
 		Text = playerName..' joined the game!'
 	})
-end, 'ChatMain')
+end, 'YourLocalScript')
 ```
 
 
