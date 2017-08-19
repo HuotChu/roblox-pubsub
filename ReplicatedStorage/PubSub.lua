@@ -1,7 +1,6 @@
 --[[
     // Filename: PubSub.lua
-    // Version 1.0
-    // Release 1
+    // Version 1.1
     // Written by: HuotChu/BluJagu/ScottBishop
     // Description: Handles in game event management compatible with FilteringEnabled
 ]]--
@@ -76,10 +75,8 @@ local subscribe = function (topic, callBack, handle, shouldCreateRemote)
     return handle
 end
 
-local sub = function () return coroutine.create(subscribe) end
-
 local s = function (topic, callBack, handle, shouldCreateRemote)
-    local co = sub()
+    local co = coroutine.create(subscribe)
     coroutine.resume(co, topic, callBack, handle, shouldCreateRemote)
 end
 
@@ -140,10 +137,8 @@ local publish = function (topic, ...)
     end
 end
 
-local pub = function () return coroutine.create(publish) end
-
 local p = function (topic, ...)
-    local co = pub()
+    local co = coroutine.create(publish)
     coroutine.resume(co, topic, ...)
 end
 
