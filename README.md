@@ -9,8 +9,11 @@
 
 PubSub works with FilteringEnabled and allows for easy Publish and Subscribe functionality.
 
+&nbsp;
 
 No Copylock Sample on Roblox: https://www.roblox.com/games/896539588/Event-Management-Demo
+
+Examples and discussion on RBXDev Forums: https://devforum.roblox.com/t/pubsub-for-roblox-publish-subscribe-eventing/47850
 
 &nbsp;
 
